@@ -27,7 +27,7 @@ const UserTable = ({ user,deleteUserAction }) => {
                                     <Table.Cell>{user.email}</Table.Cell>
                                     <Table.Cell className={'flex gap-5'}>
                                         <Link href={`/user/${user._id}`}><Button variant='outline'>Details</Button></Link>
-                                        <Link href={`/user/${user._id}`}><Button variant='outline'>Edits</Button></Link>
+                                        <Link href={`/user/${user._id}/edit`}><Button variant='outline'>Edits</Button></Link>
                                         <AlertDialog>
                                             <Button variant="danger">Delete Project</Button>
                                             <AlertDialog.Backdrop>

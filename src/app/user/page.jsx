@@ -1,13 +1,17 @@
 import { GetUser } from '@/app/lib/api/data'
 import React from 'react'
 import UserTable from '../Components/UserTable';
-import { deleteUser } from '../lib/action';
+import { createUser, deleteUser } from '../lib/action';
+import AddUser from '../Components/AddUser';
 
-const UserMangementPage = async() => {
-    const User=await GetUser();
+const UserMangementPage = async () => {
+    const User = await GetUser();
     return (
         <div>
-            <h2>User Management : {User.length}</h2>
+            <div className='flex justify-between m-5'>
+                <h2>User Management : {User.length}</h2>
+                <AddUser createUserAction={createUser}></AddUser>
+            </div>
             <UserTable user={User} deleteUserAction={deleteUser}></UserTable>
         </div>
     )
