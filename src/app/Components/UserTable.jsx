@@ -29,7 +29,7 @@ const UserTable = ({ user,deleteUserAction }) => {
                                         <Link href={`/user/${user._id}`}><Button variant='outline'>Details</Button></Link>
                                         <Link href={`/user/${user._id}/edit`}><Button variant='outline'>Edits</Button></Link>
                                         <AlertDialog>
-                                            <Button variant="danger">Delete Project</Button>
+                                            <Button variant="danger">Delete</Button>
                                             <AlertDialog.Backdrop>
                                                 <AlertDialog.Container>
                                                     <AlertDialog.Dialog className="sm:max-w-[400px]">
